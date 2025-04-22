@@ -1,55 +1,84 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation - Salman & Aaliya</title>
+  <title>Salman & Aaliya Wedding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <style>
-    body {
-      background-color: #f8f9fa;
-      text-align: center;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    .invitation-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .map-button {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #28a745;
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 8px;
-    }
+    body { font-family: 'Roboto', sans-serif; }
+    .font-script { font-family: 'Great Vibes', cursive; }
   </style>
 </head>
-<body>
+<body class="bg-green-50 text-gray-800">
 
-  <h2>Wedding Invitation</h2>
+  <!-- Header & Hero Banner -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('banner.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-script mb-2">We Invite You To Celebrate</h1>
+      <h2 class="text-2xl md:text-4xl font-semibold mb-4">Our Wedding Day</h2>
+      <div class="text-3xl md:text-5xl font-script">Salman <span class="text-yellow-300">&</span> Aaliya</div>
+      <div class="text-lg mt-4">21 May 2025</div>
+    </div>
+  </header>
 
-  <img src="invitation_card_salman.jpg" alt="Wedding Invitation" class="invitation-img">
+  <!-- Body with Events -->
+  <section class="py-12 px-4 bg-white text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8">The Wedding Events</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+      <div class="bg-green-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold mb-4 text-green-700">Nikah Ceremony</h3>
+        <p class="mb-2 flex items-center"><i class="ph ph-calendar-blank mr-2"></i>Wednesday, 21st May 2025</p>
+        <p class="mb-2 flex items-center"><i class="ph ph-clock mr-2"></i>11:25 AM</p>
+        <p class="mb-2 flex items-center"><i class="ph ph-map-pin-line mr-2"></i>Shahi Darbar Hall, Takli Road, Godad Mala, Miraj - 416410</p>
+        <a href="https://www.google.com/maps?q=Shahi+Darbar+Hall,+Takli+Road,+Godad+Mala,+Miraj" target="_blank" class="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">View Location</a>
+      </div>
+      <div class="bg-green-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold mb-4 text-green-700">Walima Ceremony</h3>
+        <p class="mb-2 flex items-center"><i class="ph ph-calendar-blank mr-2"></i> Thursday, 22nd May 2025</p>
+        <p class="mb-2 flex items-center"><i class="ph ph-clock mr-2"></i> 7:00 PM to 10:00 PM</p>
+        <p class="mb-2 flex items-center"><i class="ph ph-map-pin-line mr-2"></i>Sant Dyaneshwar Nagar, Near Chintamani Mangal Karyalay, Budhgaon - 416304</p>
+        <a href="https://www.google.com/maps?q=Sant+Dyaneshwar+Nagar,+Near+Chintamani+Mangal+Karyalay,+Budhgaon" target="_blank" class="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">View Location</a>
+      </div>
+    </div>
+  </section>
 
-  <br>
-  <a class="map-button" href="https://www.google.com/maps?q=Shaahi+Darbar+Hall,+Tankhi+Road,+Miraj" target="_blank">
-    📍 View Location on Google Maps
-  </a>
-  <br>
-  <a class="map-button" href="https://maps.app.goo.gl/S6LnJAkKKamC5dAi9?g_st=awb" target="_blank">
-    📍 View Location on Google Maps
-  </a>
- <br>
- <div>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.059298680495!2d74.6574281751522!3d16.823414083970853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc123c085f615bf%3A0x19f6a6a24a8af2cd!2sSHAHI%20DARBAR%20HALL!5e0!3m2!1sen!2sin!4v1743963351175!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- Countdown Timer -->
+  <section class="py-12 bg-green-50 text-center">
+    <h2 class="text-2xl font-bold mb-4">Countdown to the Big Day</h2>
+    <div id="countdown" class="text-2xl md:text-3xl font-mono flex justify-center items-center gap-2 text-green-800"></div>
+    <div class="mt-2 text-sm md:text-base flex justify-center gap-10 text-gray-600">
+      <span>Days</span>
+      <span>Hours</span>
+      <span>Minutes</span>
+      <span>Seconds</span>
+    </div>
+  </section>
 
- </div>
+  <!-- Footer -->
+  <footer class="bg-green-200 text-center py-6 mt-12">
+    <div class="text-3xl md:text-5l font-script">Salman &nbsp; & &nbsp; Aaliya</div>
+  </footer>
 
+  <!-- Countdown Script -->
+  <script>
+    const weddingDate = new Date("May 21, 2025 11:25:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days} <i class='ph ph-heart mx-1 text-red-500'></i> ${hours} <i class='ph ph-heart mx-1 text-red-500'></i> ${minutes} <i class='ph ph-heart mx-1 text-red-500'></i> ${seconds}`;
+    }, 1000);
+  </script>
 
 </body>
 </html>
